@@ -1,0 +1,26 @@
+{
+  "name": "gitbook-plugin-contractbridge",
+  "version": "1.0.0",
+  "description": "Tools for writing bridge book",
+  "main": "index.js",
+  "engines": {
+        "gitbook": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarronshih/gitbook-plugin-contractbridge.git"
+  },
+  "keywords": [
+    "contract",
+    "bridge"
+  ],
+  "author": "Jarron Shih <jarronshih@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarronshih/gitbook-plugin-contractbridge/issues"
+  },
+  "homepage": "https://github.com/jarronshih/gitbook-plugin-contractbridge#readme"
+}
