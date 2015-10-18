@@ -1,0 +1,24 @@
+.biddingsystemTable {
+
+}
+
+.biddingsystemTable .seq {
+
+}
+
+.biddingsystemTable .bids {
+
+}
+
+.biddingsystemTable .bids .bid {
+
+}
+
+.biddingsystemTable .bids .bid .auction{
+    display : inline-block;
+    min-width: 70px;
+}
+
+.biddingsystemTable .bids .bid .auctiondef{
+    display : inline-block;
+}
