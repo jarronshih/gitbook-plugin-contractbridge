@@ -1,8 +1,11 @@
+var assets = {
+    assets: './book',
+    css: ['biddingsystemTable.css']
+};
+
 module.exports = {
-    book: {
-        assets: './book',
-        css: ['biddingsystemTable.css']
-    },
+    book: assets,
+    ebook: assets,
 
     blocks: {
         biddingSystemTable: {
