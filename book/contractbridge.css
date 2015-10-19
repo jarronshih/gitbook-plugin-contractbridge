@@ -17,9 +17,11 @@
 .biddingsystemTable .bids .bid .auction{
     margin-left: 30px;
     display : inline-block;
-    min-width: 70px;
+    min-width: 80px;
 }
 
 .biddingsystemTable .bids .bid .auctiondef{
     display : inline-block;
 }
+
+

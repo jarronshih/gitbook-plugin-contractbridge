@@ -1,6 +1,6 @@
 var assets = {
     assets: './book',
-    css: ['biddingsystemTable.css']
+    css: ['contractbridge.css']
 };
 
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
                     }
                 });
                 return '<div class="biddingsystemTable">'
-                        + '<div class="seq">' + bs_table.seq + '</div>'
+                        + '<div class="seq"><h4>' + bs_table.seq + '</h4></div>'
                         + '<div class="bids">' + bs_table.bids.map(function (bid) {
                             return '<div class="bid"><div class="auction">' + bid.auction + '</div>'
                                 + '<div class="auctiondef">' + bid.auctiondef + '</div></div>';
