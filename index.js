@@ -3,10 +3,10 @@ var assets = {
     css: ['contractbridge.css']
 };
 
-function hand_html (name, spades, hearts, diams, clubs) {
+function hand_html (player, spades, hearts, diams, clubs) {
     return '<div class="hand"> \
         <div class="hand-bar"> \
-            <div class="hand-name">' + name + '</div> \
+            <div class="hand-player"><b>' + player + '</b></div> \
         </div> \
         <div class="hand-suit"> \
             <span class="card card-suit card-spade"></span> \
@@ -31,7 +31,7 @@ function bidding_html (bids) {
     return '<div class="bidding"> \
         <div class="bidding-head">'
             + ["W", "N", "E", "S"].map(function (bid) {
-                return '<div class="bidding-cell">'+bid+'</div>';
+                return '<div class="bidding-cell"><b>'+bid+'</b></div>';
             }).reduce(function (x, y) {
                 return x + y;
             }) +
@@ -93,62 +93,51 @@ module.exports = {
             }
         },
 
-        // suit: {
-        //     shortcuts: {
-        //         parsers: ["markdown", "asciidoc"],
-        //         start: "$$",
-        //         end: "$$"
-        //     },
-        //     process: function (blk) {
-        //         switch(blk.body) {
-        //             case "S":
-        //                 return "&spades;";
-        //                 break;
-        //             case "H":
-        //                 return "&hearts;";
-        //                 break;
-        //             case "D":
-        //                 return "&diams;";
-        //                 break;
-        //             case "C":
-        //                 return "&clubs;";
-        //                 break;
-        //             default:
-        //                 return blk.body;
-        //                 break;
-        //         }
-        //     }
-        // },
-
         handBox: {
             process: function (blk){
-                var name = blk.kwargs.name || "";
+                var player = blk.kwargs.player || "";
                 var spades = blk.kwargs.spades || "";
                 var hearts = blk.kwargs.hearts || "";
                 var diams = blk.kwargs.diams || "";
                 var clubs = blk.kwargs.clubs || "";
-                return hand_html(name, spades, hearts, diams, clubs);
+                return hand_html(player, spades, hearts, diams, clubs);
             }
         },
         biddingBox: {},
         biddingQuiz: {
             process: function (blk) {
-                var name = blk.kwargs.name || "";
+                var player = blk.kwargs.player || "";
                 var spades = blk.kwargs.spades || "";
                 var hearts = blk.kwargs.hearts || "";
                 var diams = blk.kwargs.diams || "";
                 var clubs = blk.kwargs.clubs || "";
                 var bids = blk.kwargs.bids || "";
                 var answer = blk.kwargs.answer || "";
+                var answer_detail = blk.kwargs.answer_detail || "";
                 return '<div class="biddingQuiz"> \
-                    <div class="biddingQuiz-block">'+ hand_html(name, spades, hearts, diams, clubs) + '</div> \
+                    <div class="biddingQuiz-block">'+ hand_html(player, spades, hearts, diams, clubs) + '</div> \
                     <div class="biddingQuiz-block">' + bidding_html(bids) +'</div> \
-                    <div class="biddingQuiz-block">Answer: ' + answer + '</div> \
+                    <div class="biddingQuiz-block"> \
+                        Answer: ' + answer + 
+                        '<br>'
+                        + answer_detail +
+                    '</div> \
                 </div>';
             }
         }
     },
 
     // filters: {},
-    // hooks: {}
+    hooks: {
+        "page": function (page) {
+            var content = page.sections[0].content;
+            content = content
+                        .replace(/!S/g, '<span class="card-spade"></span>')
+                        .replace(/!H/g, '<span class="card-heart"></span>')
+                        .replace(/!D/g, '<span class="card-diamond"></span>')
+                        .replace(/!C/g, '<span class="card-club"></span>');
+            page.sections[0].content = content;
+            return page;
+        }
+    }
 };
