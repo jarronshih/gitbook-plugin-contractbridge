@@ -9,7 +9,7 @@
 // bid seqence.
 1N - ??
 {% bids %}
-// bid and define, use ## to seperate
+// bid and define, use ## as seperator
 2C      ##Stayman 
 2DH     ##Jacoby transfer
 2N      ##NAT, GT.

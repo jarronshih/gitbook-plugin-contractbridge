@@ -1,3 +1,4 @@
+/* biddingsystemTable */
 .biddingsystemTable {
 
 }
@@ -24,4 +25,106 @@
     display : inline-block;
 }
 
+/* biddingQuiz */
+.biddingQuiz {
+    position: relative;
+}
 
+.biddingQuiz-block {
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/* board-hand */
+.hand {
+    height: 145px;
+    width: 160px;
+    font-size: 18px;
+    display: inline-block;
+    background-color: #ffffff;
+    border: solid;
+}
+
+/*.board-hand-north {
+    top: 1%;
+    left: 30%;
+}
+
+.board-hand-south {
+    top: 67%;
+    left: 30%;
+}
+
+.board-hand-east {
+    top: 34%;
+    left: 59%;
+}
+
+.board-hand-west {
+    top: 34%;
+    left: 1%;
+}*/
+.hand-bar {
+    height: 20%;
+    border-bottom : solid;
+}
+
+.hand-name {
+    margin-left: 30px;
+}
+
+.hand-suit {
+    height: 20%;
+}
+
+.card {
+    vertical-align: middle;
+}
+
+.card-suit {
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+}
+
+.card-spade::after {
+    content: '\2664';
+    color: blue;
+}
+
+.card-heart::after {
+    content: '\2661 ';
+    color: red;
+}
+
+.card-diamond::after {
+    content: '\2662 ';
+    color: orange;
+}
+
+.card-club::after {
+    content: '\2667 ';
+    color: green;
+}
+
+/* bidding box */
+.bidding {
+    position: relative;
+    min-height: 145px;
+    width: 160px;
+    border: solid;
+    font-size: 18px;
+}
+
+.bidding-head {
+    border-bottom: solid;
+}
+
+.bidding-cell {
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    vertical-align: top;
+}
