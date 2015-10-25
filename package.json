@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-contractbridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tools for writing bridge book",
   "main": "index.js",
   "engines": {

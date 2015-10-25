@@ -29,6 +29,8 @@
 
 /* bids */
 .bids {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .bids-title {
@@ -46,8 +48,18 @@
     width: 75px;
 }
 .bids-biddef {
-    width: 90%;
     width: calc(100% - 75px);
+    display: inline-block;
+    vertical-align: top;
+}
+.bids-bid-long {
+    font-weight: bold;
+    display: inline-block;
+    width: 30%;
+    font-size: 110%;
+}
+.bids-biddef-long {
+    width: 70%;
     display: inline-block;
     vertical-align: top;
 }

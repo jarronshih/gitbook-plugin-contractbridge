@@ -19,7 +19,11 @@ module.exports = {
                         if (index != -1) {
                             bid = item.substring(0, index).trim();
                             biddef = item.substring(index + 2).trim();
-                            output.push('<div class="bids-row"><span class="bids-bid">' + bid + '</span><span class="bids-biddef">'+ biddef + '</span></div>');
+                            if (index >= 10) {
+                                output.push('<div class="bids-row"><span class="bids-bid-long">' + bid + '</span><span class="bids-biddef-long">'+ biddef + '</span></div>');
+                            } else {
+                                output.push('<div class="bids-row"><span class="bids-bid">' + bid + '</span><span class="bids-biddef">'+ biddef + '</span></div>');
+                            }
                         } else {
                             output.push('<div class="bids-title">' + item + '</div>');
                         }
