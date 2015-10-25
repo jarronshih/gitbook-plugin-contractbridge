@@ -7,38 +7,29 @@
 - heart: !H
 - diamand: !D
 - club: !C
+- no trump: !N
 ```
 !S
 !H
 !D
 !C
+!N
 ```
 
-### Bidding System Table
-- seq: write bidding sequence
-- bids: write bid and define, using ```##``` to separate
-
+### Bids
+- use ```{% bids %}``` ```{% endbids %}``` to wrap it.
+- title
+    - no format
+- bids
+    - use ```:=``` to split
 ```
-{% biddingSystemTable %}
-{% seq %}
-1N - ??
 {% bids %}
-2C      ##Stayman 
-2DH     ##Jacoby transfer
-2N      ##NAT, GT.
-{% endbiddingSystemTable %}
-```
+1N-2♣; 2!D-??
+2!H     := 4-4 M's weak.
+2!S     := 5!S's INV. Opener passes with MIN, bids 2N with MAX no fit, responder can rebid 3m=to play.
+2!N     := INV, promises a 4-card major.
+3♣/!D   := 5+♣/!D's slam try with a 4-card major.
+3!H/!S  := Smolen.
 
-### Bidding Quizz
-```
-{% biddingQuiz 
-    player="North", 
-    spades="KQ4", 
-    hearts="KT6", 
-    diams="KJT3", 
-    clubs="742",
-    bids=["?"],
-    answer="Pass"
-    %}
-{% endbiddingQuiz %}
+{% endbids %}
 ```

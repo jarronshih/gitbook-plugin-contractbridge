@@ -1,130 +1,53 @@
-/* biddingsystemTable */
-.biddingsystemTable {
-
+/* word suit */
+.word-suit {
 }
 
-.biddingsystemTable .seq {
-
+.word-suit-notrump:after {
+    content: 'N';
+    color: gray;
 }
 
-.biddingsystemTable .bids {
-
-}
-
-.biddingsystemTable .bids .bid {
-
-}
-
-.biddingsystemTable .bids .bid .auction{
-    margin-left: 30px;
-    display : inline-block;
-    min-width: 80px;
-}
-
-.biddingsystemTable .bids .bid .auctiondef{
-    display : inline-block;
-}
-
-/* biddingQuiz */
-.biddingQuiz {
-    position: relative;
-}
-
-.biddingQuiz-block {
-    margin: 10px 10px 10px 10px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-
-/* board-hand */
-.hand {
-    height: 145px;
-    width: 160px;
-    font-size: 18px;
-    display: inline-block;
-    background-color: #ffffff;
-    border: solid;
-}
-
-/*.board-hand-north {
-    top: 1%;
-    left: 30%;
-}
-
-.board-hand-south {
-    top: 67%;
-    left: 30%;
-}
-
-.board-hand-east {
-    top: 34%;
-    left: 59%;
-}
-
-.board-hand-west {
-    top: 34%;
-    left: 1%;
-}*/
-.hand-bar {
-    height: 20%;
-    border-bottom : solid;
-}
-
-.hand-player {
-    margin-left: 30px;
-}
-
-.hand-suit {
-    height: 20%;
-}
-
-.card {
-    vertical-align: middle;
-}
-
-.card-suit {
-    display: inline-block;
-    width: 25px;
-    text-align: center;
-}
-
-.card-spade::after {
-    content: '\2664';
+.word-suit-spades::after {
+    content: '♠';
     color: blue;
 }
 
-.card-heart::after {
-    content: '\2661 ';
+.word-suit-hearts::after {
+    content: '♥';
     color: red;
 }
 
-.card-diamond::after {
-    content: '\2662 ';
+.word-suit-diams::after {
+    content: '♦';
     color: orange;
 }
 
-.card-club::after {
-    content: '\2667 ';
+.word-suit-clubs::after {
+    content: '♣';
     color: green;
 }
 
-/* bidding box */
-.bidding {
-    position: relative;
-    min-height: 145px;
-    width: 160px;
-    border: solid;
-    font-size: 18px;
+/* bids */
+.bids {
 }
 
-.bidding-head {
-    border-bottom: solid;
+.bids-title {
+    font-size: 110%;
 }
 
-.bidding-cell {
+.bids-row {
+}
+
+.bids-bid {
+    font-weight: bold;
     display: inline-block;
-    width: 25%;
-    text-align: center;
+    min-width: 75px;
+    font-size: 110%;
+    width: 75px;
+}
+.bids-biddef {
+    width: 90%;
+    width: calc(100% - 75px);
+    display: inline-block;
     vertical-align: top;
 }
