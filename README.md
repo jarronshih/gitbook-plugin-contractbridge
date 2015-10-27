@@ -8,6 +8,8 @@
 - diamand: !D
 - club: !C
 - no trump: !N
+
+#### example
 ```
 !S
 !H
@@ -22,14 +24,15 @@
     - no format
 - bids
     - use ```:=``` to split
+
+#### example
 ```
 {% bids %}
-1N-2♣; 2!D-??
+1!N-2!C; 2!D-??
 2!H     := 4-4 M's weak.
 2!S     := 5!S's INV. Opener passes with MIN, bids 2N with MAX no fit, responder can rebid 3m=to play.
 2!N     := INV, promises a 4-card major.
-3♣/!D   := 5+♣/!D's slam try with a 4-card major.
+3!C/!D  := 5+!C/!D's slam try with a 4-card major.
 3!H/!S  := Smolen.
-
 {% endbids %}
 ```

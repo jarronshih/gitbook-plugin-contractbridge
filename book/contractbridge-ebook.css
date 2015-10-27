@@ -1,1 +1,12 @@
-@import 'contractbridge.css'
+@import 'contractbridge.css';
+
+@media all and (max-width: 480) {
+    .bids-bid-long {
+        display: block;
+        width: 100%;
+    }
+    .bids-biddef-long {
+        width: 100%;
+        display: block;
+    }
+}
