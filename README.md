@@ -19,11 +19,11 @@
 ```
 
 ### Bids
-- use ```{% bids %}``` ```{% endbids %}``` to wrap it.
+- use `{% bids %}` `{% endbids %}` to wrap it.
 - title
     - no format
 - bids
-    - use ```:=``` to split
+    - use `:=` to split
 
 #### example
 ```
@@ -42,7 +42,7 @@
 
 ####
 ```
-.... ``` 1!C-1!D; ?? ``` .....
+.... ` 1!C-1!D; ?? ` .....
 
 ```
 
