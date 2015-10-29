@@ -36,3 +36,13 @@
 3!H/!S  := Smolen.
 {% endbids %}
 ```
+
+### inline bid seqence
+- when writing bid seqence in paragraph.
+
+####
+```
+.... ``` 1!C-1!D; ?? ``` .....
+
+```
+
