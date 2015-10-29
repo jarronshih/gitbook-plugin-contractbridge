@@ -70,11 +70,11 @@
     font-weight: bold;
     display: inline-block;
     font-size: 110%;
-    width: 5em;
+    width: 6em;
     vertical-align: top;
 }
 .bids-biddef {
-    width: calc(100% - 6em);
+    width: calc(100% - 7em);
     display: inline-block;
     vertical-align: middle;
 }
