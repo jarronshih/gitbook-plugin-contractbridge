@@ -1,12 +1,4 @@
 @import 'contractbridge.css';
+/* http://help.atavist.com/ebook:css */
 
-@media all and (max-width: 480) {
-    .bids-bid-long {
-        display: block;
-        width: 100%;
-    }
-    .bids-biddef-long {
-        width: 100%;
-        display: block;
-    }
-}
+

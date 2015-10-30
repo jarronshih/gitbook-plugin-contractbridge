@@ -5,46 +5,26 @@
 
 .word-suit-notrump {
     font-size:90%;
+    color: Dimgray;
 }
 
 .word-suit-spades {
-    font-size: 120%;
+    font-size: 115%;
+    color: blue;
 }
 
 .word-suit-hearts {
     font-size: 105%;
+    color: red;
 }
 
 .word-suit-diams {
     font-size: 125%;
+    color: orange;
 }
 
 .word-suit-clubs {
     font-size: 110%;
-}
-
-.word-suit-notrump:after {
-    content: 'N';
-    color: Dimgray;
-}
-
-.word-suit-spades::after {
-    content: '♠';
-    color: blue;
-}
-
-.word-suit-hearts::after {
-    content: '♥';
-    color: red;
-}
-
-.word-suit-diams::after {
-    content: '♦';
-    color: orange;
-}
-
-.word-suit-clubs::after {
-    content: '♣';
     color: green;
 }
 
@@ -97,3 +77,16 @@
     vertical-align: top;
 }
 
+
+/* screen size */
+@media (max-width: 480px) {
+    .bids-bid-long {
+        display: block;
+        width: 100%;
+    }
+
+    .bids-biddef-long {
+        width: 100%;
+        display: block;
+    }
+}

@@ -45,11 +45,11 @@ module.exports = {
             page.sections = _.map(page.sections, function(section) {
                 var content = section.content;
                 content = content
-                    .replace(/!N/g, '<span class="word-suit word-suit-notrump"></span>')
-                    .replace(/!S/g, '<span class="word-suit word-suit-spades"></span>')
-                    .replace(/!H/g, '<span class="word-suit word-suit-hearts"></span>')
-                    .replace(/!D/g, '<span class="word-suit word-suit-diams"></span>')
-                    .replace(/!C/g, '<span class="word-suit word-suit-clubs"></span>');
+                    .replace(/!N/g, '<span class="word-suit word-suit-notrump">N</span>')
+                    .replace(/!S/g, '<span class="word-suit word-suit-spades">♠</span>')
+                    .replace(/!H/g, '<span class="word-suit word-suit-hearts">♥</span>')
+                    .replace(/!D/g, '<span class="word-suit word-suit-diams">♦</span>')
+                    .replace(/!C/g, '<span class="word-suit word-suit-clubs">♣</span>');
                 section.content = content;
                 return section;
             });
