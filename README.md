@@ -18,14 +18,27 @@
 !N
 ```
 
+### inline bid seqence
+- when writing bid seqence in paragraph.
+
+#### example
+```
+.... ` 1!C-1!D; ?? ` .....
+
+```
+
+
 ### Bids
 - use `{% bids %}` `{% endbids %}` to wrap it.
 - title
     - no format
 - bids
     - use `:=` to split
+- right align
+    - use `>>` for right align
 
-#### example
+
+#### example 1
 ```
 {% bids %}
 1!N-2!C; 2!D-??
@@ -37,12 +50,14 @@
 {% endbids %}
 ```
 
-### inline bid seqence
-- when writing bid seqence in paragraph.
-
-####
+#### example 2
 ```
-.... ` 1!C-1!D; ?? ` .....
-
+{% bids %}
+1!C -      := 3+!C
+>>     1D; := 4+!D
+1!S -      := 4+!S
+{% endbids %}
 ```
+
+
 

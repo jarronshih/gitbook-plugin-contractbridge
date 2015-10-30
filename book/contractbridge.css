@@ -71,9 +71,15 @@
     font-weight: bold;
     display: inline-block;
     font-size: 110%;
-    width: 6em;
+    width: 5em;
+    margin-right: 1em;
     vertical-align: top;
 }
+
+.bids-bid-right {
+    text-align: right;
+}
+
 .bids-biddef {
     width: calc(100% - 7em);
     display: inline-block;
