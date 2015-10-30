@@ -19,7 +19,7 @@ module.exports = {
                         if (index != -1) {
                             bid = item.substring(0, index).trim();
                             biddef = item.substring(index + 2).trim();
-                            if (bid.startsWith('>>')){
+                            if (bid.indexOf('>>') === 0){
                                 bid = bid.substring(2).trim();
                                 output.push('<div class="bids-row"><div class="bids-bid bids-bid-right">' + bid + '</div><div class="bids-biddef">'+ biddef + '</div></div>');
                             } else if (bid.length > 10) {
