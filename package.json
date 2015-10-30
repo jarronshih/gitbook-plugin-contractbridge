@@ -1,10 +1,13 @@
 {
   "name": "gitbook-plugin-contractbridge",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Tools for writing bridge book",
   "main": "index.js",
   "engines": {
-    "gitbook": ">1.x.x"
+    "gitbook": "*"
+  },
+  "dependencies": {
+    "lodash": "3.0.1"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,8 @@
 module.exports = {
     book: {
         assets: './book',
-        css: ['contractbridge.css']
+        css: ['contractbridge.css'],
+        js: ['auto-link.js']
     },
     ebook: {
         assets: './book',
@@ -40,14 +41,18 @@ module.exports = {
     // filters: {},
     hooks: {
         "page": function (page) {
-            var content = page.sections[0].content;
-            content = content
-                .replace(/!N/g, '<span class="word-suit word-suit-notrump"></span>')
-                .replace(/!S/g, '<span class="word-suit word-suit-spades"></span>')
-                .replace(/!H/g, '<span class="word-suit word-suit-hearts"></span>')
-                .replace(/!D/g, '<span class="word-suit word-suit-diams"></span>')
-                .replace(/!C/g, '<span class="word-suit word-suit-clubs"></span>');
-            page.sections[0].content = content;
+            var _ = require('lodash');
+            page.sections = _.map(page.sections, function(section) {
+                var content = section.content;
+                content = content
+                    .replace(/!N/g, '<span class="word-suit word-suit-notrump"></span>')
+                    .replace(/!S/g, '<span class="word-suit word-suit-spades"></span>')
+                    .replace(/!H/g, '<span class="word-suit word-suit-hearts"></span>')
+                    .replace(/!D/g, '<span class="word-suit word-suit-diams"></span>')
+                    .replace(/!C/g, '<span class="word-suit word-suit-clubs"></span>');
+                section.content = content;
+                return section;
+            });
             return page;
         }
     }
