@@ -5,10 +5,10 @@ require(["gitbook"], function(gitbook) {
                 title = $(this).html().replace(/<([^ >]+)[^>]*>.*?<\/\1>|<[^\/]+\/>/ig, "").trim();
                 link = $(this).attr('href');
 
-                $( "section .bids-biddef , section p:contains("+title+")" ).each(function( index ) {
+                $( "section .bids-biddef , section p" ).each(function( index ) {
+                    re = new RegExp(title, 'gi');
                     text = $(this).html();
-                    if (text.indexOf(title) != -1) {
-                        re = new RegExp(title, 'gi');
+                    if (re.test(text)) {
                         $(this).html(text.replace(re, '<a href=\"'+link+'\">'+title+'</a>'));
                     }
                 });
