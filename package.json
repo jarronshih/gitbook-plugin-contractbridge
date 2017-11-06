@@ -7,6 +7,13 @@
     "gitbook": "*"
   },
   "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "gitbook-tester": "*"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jarronshih/gitbook-plugin-contractbridge.git"
