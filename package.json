@@ -4,7 +4,7 @@
   "description": "Tools for writing bridge book",
   "main": "index.js",
   "engines": {
-    "gitbook": "*"
+    "gitbook": "3.2.3"
   },
   "dependencies": {},
   "devDependencies": {
@@ -12,7 +12,7 @@
     "gitbook-tester": "*"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test --timeout 15000"
   },
   "repository": {
     "type": "git",

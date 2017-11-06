@@ -1,4 +1,5 @@
 # gitbook-plugin-contractbridge
+[![Build Status](https://travis-ci.org/jarronshih/gitbook-plugin-contractbridge.svg?branch=master)](https://travis-ci.org/jarronshih/gitbook-plugin-contractbridge)
 
 ## Format
 
@@ -23,7 +24,7 @@
 
 #### example
 ```
-.... ` 1!C-1!D; ?? ` .....
+` 1!C-1!D; ?? `
 
 ```
 
@@ -58,6 +59,3 @@
 1!S -      := 4+!S
 {% endbids %}
 ```
-
-
-
