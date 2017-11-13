@@ -1,3 +1,6 @@
+'use strict';
+
+
 module.exports = {
   book: {
     assets: './book',
@@ -50,6 +53,7 @@ module.exports = {
   // filters: {},
   hooks: {
     page(page) {
+      /* eslint no-param-reassign: ["error", { "props": false }] */
       page.content = page.content
         .replace(/!N/g, '<span class="word-suit word-suit-notrump">N</span>')
         .replace(/!S/g, '<span class="word-suit word-suit-spades">♠</span>')
