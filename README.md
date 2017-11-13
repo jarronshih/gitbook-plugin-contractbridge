@@ -2,29 +2,26 @@
 [![Build Status](https://travis-ci.org/jarronshih/gitbook-plugin-contractbridge.svg?branch=master)](https://travis-ci.org/jarronshih/gitbook-plugin-contractbridge)
 
 ## Format
-
 ### Suit
+Support suit and no trump:
+- no trump: !N
 - spade: !S
 - heart: !H
 - diamand: !D
 - club: !C
-- no trump: !N
 
 #### example
 ```
-!S
+!S =
 !H
 !D
 !C
 !N
 ```
 
-### inline bid seqence
-- when writing bid seqence in paragraph.
-
-#### example
+### inline bid sequence
 ```
-` 1!C-1!D; ?? `
+... example bidding `1!C-1!D; ??`, and description ...
 
 ```
 
@@ -32,14 +29,14 @@
 ### Bids
 - use `{% bids %}` `{% endbids %}` to wrap it.
 - title
-    - no format
+    - The first line without `:=` will be the title line.
 - bids
-    - use `:=` to split
+    - use `:=` to split the bid and description.
 - right align
-    - use `>>` for right align
+    - use `>>` for right aligned
 
 
-#### example 1
+#### Example 1
 ```
 {% bids %}
 1!N-2!C; 2!D-??
@@ -51,11 +48,17 @@
 {% endbids %}
 ```
 
-#### example 2
+#### Example 2
 ```
 {% bids %}
 1!C -      := 3+!C
 >>    1!D; := 4+!D
 1!S -      := 4+!S
 {% endbids %}
+```
+
+## Development
+```
+npm link
+npm unlink
 ```

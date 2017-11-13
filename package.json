@@ -9,7 +9,10 @@
   "dependencies": {},
   "devDependencies": {
     "mocha": "*",
-    "gitbook-tester": "*"
+    "gitbook-tester": "*",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0"
   },
   "scripts": {
     "test": "mocha test --timeout 15000"
