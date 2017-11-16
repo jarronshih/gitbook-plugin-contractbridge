@@ -4,7 +4,7 @@
   "description": "Tools for writing bridge book",
   "main": "index.js",
   "engines": {
-    "gitbook": "3.2.3"
+    "gitbook": ">=3.0.0"
   },
   "dependencies": {},
   "devDependencies": {
